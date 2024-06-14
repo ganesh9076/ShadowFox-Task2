@@ -1,0 +1,390 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin: 0 0 1.5rem 0;
+}
+
+.hero .btn {
+    background-color: white;
+    color: #007bff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.hero .btn:hover {
+    background-color: #f8f9fa;
+}
+
+aside {
+    width: 25%;
+    padding-right: 2rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+aside h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+}
+
+.filter-group {
+    margin-bottom: 1rem;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.filter-group input[type="range"] {
+    width: 100%;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+#product-list {
+    width: 75%;
+}
+
+.sort-group {
+    margin-bottom: 1rem;
+}
+
+.sort-group label {
+    font-weight: bold;
+}
+
+.sort-group select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.product-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.product-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+.product-item h3 {
+    margin-top: 0;
+}
+
+.product-item p {
+    margin: 0.5rem 0;
+}
+
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* Existing styles... */
+
+/* Checkout Form Styles */
+#checkout-form {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+#checkout-form h2 {
+    margin-bottom: 20px;
+}
+
+#checkout-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#checkout-form form div {
+    margin-bottom: 10px;
+}
+
+#checkout-form form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#checkout-form form input,
+#checkout-form form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#checkout-form form textarea {
+    resize: none;
+    height: 100px;
+}
+
+#checkout-form form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#checkout-form form button:hover {
+    background-color: #218838;
+}
+
+/* Hide the checkout form initially */
+#checkout-form {
+    display: none;
+}
+
+
+.product-details-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    z-index: 1000;
+    width: 80%;
+    max-width: 600px;
+}
+
+.product-details-container img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-details-container .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.product-details-container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    aside, #product-list {
+        width: 100%;
+    }
+}
+
+
+.product-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; 
+    
+    gap: 20px;
+}
+
+.product-slide {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    
+    margin-right: 20px;
+   
+    min-width: 200px;
+}
+
+.product-slide img {
+    max-width: 100%;
+    border-radius: 8px;
+    
+    margin: 0 auto;
+}
+
+
+.product-info {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-info h3 {
+    margin: 0 0 5px 0;
+}
+
+.product-info p {
+    margin: 0;
+}
+
+.product-info .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-info .btn:hover {
+    background-color: #0056b3;
+}
+
+.hero form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero input[type="email"] {
+    padding: 0.75rem;
+    margin-right: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.hero .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.hero .btn:hover {
+    background-color: #0056b3;
+}
+
